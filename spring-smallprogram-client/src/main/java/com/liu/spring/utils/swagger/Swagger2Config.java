@@ -39,7 +39,7 @@ public class Swagger2Config {
                 .title(PROJECT_NAME + "    文档v1.1.0")
                 .description(PROJECT_NAME + "    接口说明文档")
                 .termsOfServiceUrl("")
-                .contact(new Contact("浪","lang.com","738672162@qq.com"))
+                .contact(new Contact("浪","lang.com","@qq.com"))
                 .version("1.0")
                 .build();
     }

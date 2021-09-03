@@ -148,7 +148,7 @@ fdfs:
 #      password: ${customConfig.security.password}
 
 #auth-server: http://qingyinoauth.com:8002 # 认证服务器地址
-auth-server: http://iqingyin.com:8002 # 认证服务器地址
+auth-server: http://aaa.com:8002 # 认证服务器地址
 #auth-server: http://localhost:8002 # 认证服务器地址
 #auth-server: http://lang:8001/spring-oauth # 认证服务器地址
 security:
@@ -250,7 +250,7 @@ customConfig:
 #      driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://127.0.0.1:3306/lovesound?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
       username: root
-      password: langlang1999
+      password: admin
       driver-class-name: com.mysql.jdbc.Driver
   rabbitmq: #rabbitmq的配置
     server:
@@ -261,7 +261,7 @@ customConfig:
   image:
     resourceMappingPath: file:/water/runFile/application/resource/
     resourceAbsolutePath: /water/runFile/application/resource/
-    resourceUrlPath: https://iqingyin.com/resource/
+    resourceUrlPath: https://aaa.com/resource/
 
 
 

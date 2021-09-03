@@ -3,10 +3,6 @@ package com.liu.spring.springclient;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import com.github.tobato.fastdfs.FdfsClientConfig;
-import com.liu.spring.domain.log.LoveSoundLogSearch;
-import com.liu.spring.service.log.LogFeign;
-import com.liu.spring.service.log.LogLoginService;
-import com.liu.util.date.DateUtils;
 import com.liu.util.fastdfs.FastDFSClientWrapper;
 import com.liu.util.rediscluster.RedisConfig;
 import io.swagger.annotations.ApiImplicitParam;
@@ -58,16 +54,11 @@ public class SpringClientApplication {
     @Autowired
     private FastDFSClientWrapper dfsClient;
 
-    @Autowired
-    private LogLoginService logLoginService;
 
 
     @Autowired
     private RedisConfig redisTemplate;
 
-
-    @Autowired(required = false)
-    private LogFeign logFeign;
 
 
 
@@ -128,37 +119,6 @@ public class SpringClientApplication {
     @RequestMapping("testLcn")
     @ResponseBody
     public String testLcn(HttpServletRequest request){
-        System.out.println("先保存，然后第三方保存" + request.getServerPort());
-
-        LoveSoundLogSearch loveSoundLogSearch = new LoveSoundLogSearch();
-        loveSoundLogSearch.setUserId(Long.valueOf(22));
-        loveSoundLogSearch.setCreateTime(DateUtils.getNowDateTimestamp());
-
-//        logLoginService.updateLogSearch();
-        try {
-            logLoginService.updateLogSearch();
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
-//        logLoginService.saveLogSearch(loveSoundLogSearch);
-
-//        if(1 == 1){
-//            throw new RuntimeException("");
-//        }
-
-        //然后调用第三方服务保存登录数据
-        String val = null;
-        try {
-            val = logFeign.getHe();
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException(e);
-        }
-
-        System.out.println(val);
-
         System.out.println("插入完毕...事务提交！");
 
 //        logger.info("插入完毕...事务提交！");
@@ -187,7 +147,6 @@ public class SpringClientApplication {
 
 //        logLoginService.updateLogSearch1();
         try {
-            logLoginService.updateLogSearch1();
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);

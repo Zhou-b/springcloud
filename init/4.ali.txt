@@ -1,3 +1,0 @@
-远程连接密码： 768481
-java -jar -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m -Xms384m -Xmx384m -Xmn64m -Xss256k -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC spring-oauth.jar &
-java -jar -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=256m -Xms1024m -Xmx1024m -Xmn256m -Xss256k -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC spring-smallprogram-client.jar &

@@ -197,7 +197,7 @@ customConfig:
     server:
       url: jdbc:mysql://127.0.0.1:3306/lovesound?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
       username: root
-      password: langlang1999
+      password: admin
       driver-class-name: com.mysql.jdbc.Driver
   rabbitmq: #rabbitmq的配置
     server:
