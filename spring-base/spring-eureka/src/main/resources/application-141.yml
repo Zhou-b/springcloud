@@ -31,7 +31,7 @@ management:
 customConfig:
   eureka:
     server: #eureka的配置
-      hostname: 192.168.232.147
+      hostname: 192.168.114.101
   security: #security的配置
     username: admin
     password: admin123
