@@ -170,8 +170,8 @@ customConfig:
       username: admin
       password: admin123
 #      hostname: localhost
-      hostname: 192.168.232.146
-      hostname2: 192.168.232.147
+      hostname: 192.168.114.101
+      hostname2: 192.168.114.102
   config:
     server: #config的配置
       appname: spring-config
@@ -190,7 +190,7 @@ customConfig:
   redis:
     server:
 #      host: 127.0.0.1
-      host: 192.168.232.146:7001,192.168.232.147:7002,192.168.232.147:7003
+      host: 192.168.114.101:7001,192.168.114.102:7002,192.168.114.102:7003
       password: #redisadmin
       port: 6379
       timeout: 8000
@@ -203,7 +203,7 @@ customConfig:
   datasource:
     server:
 #      url: jdbc:mysql://127.0.0.1:3306/lovesound?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
-      url: jdbc:mysql://192.168.232.146:3310/lovesound?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+      url: jdbc:mysql://192.168.114.101:3310/lovesound?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
       username: root
 #      password: admin
       password: 123456

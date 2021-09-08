@@ -162,7 +162,7 @@ fdfs:
 #auth-server: http://aaa.com:8002 # 认证服务器地址
 #auth-server: http://localhost:8002 # 认证服务器地址
 #auth-server: http://lang:8001/spring-oauth # 认证服务器地址
-auth-server: http://192.168.232.146:8001/spring-oauth # 认证服务器地址
+auth-server: http://192.168.114.101:8001/spring-oauth # 认证服务器地址
 security:
   ignored: /favicon.ico,/scripts/**,/styles/**,/images/**
   sessions: ALWAYS
@@ -203,7 +203,7 @@ tx-lcn:
       enabled: true
   client:
 #    manager-address: 127.0.0.1:8070
-    manager-address: 192.168.232.146:8070
+    manager-address: 192.168.114.101:8070
 #    manager-address: 192.168.199.130:8070
   logger:
     enabled: true
@@ -230,8 +230,8 @@ customConfig:
       username: admin
       password: admin123
 #      hostname: localhost
-      hostname: 192.168.232.146
-      hostname2: 192.168.232.147
+      hostname: 192.168.114.101
+      hostname2: 192.168.114.102
   config:
     server: #config的配置
       appname: spring-config
@@ -250,7 +250,7 @@ customConfig:
   redis:
     server:
 #      host: 127.0.0.1
-      host: 192.168.232.146:7001,192.168.232.147:7002,192.168.232.147:7003
+      host: 192.168.114.101:7001,192.168.114.102:7002,192.168.114.102:7003
       password: #redisadmin
       port: 6379
       timeout: 8000
@@ -270,7 +270,7 @@ customConfig:
 #      username: root
 #      password: admin
 #      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.232.146:3310/lovesound?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
+      url: jdbc:mysql://192.168.114.101:3310/lovesound?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
       username: root
       password: 123456
       driver-class-name: com.mysql.jdbc.Driver
